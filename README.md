@@ -1,19 +1,24 @@
-deluge container
-=================
+# Docker Deluge WebUI Container
+_maintained by MarvAmBass_
 
-This will produce a docker container for the [deluge] bittorrent client software.  This container is based upon the work done by [aostanin] with the difference being a Ubuntu 14.04 image.
+## What is it
 
-This container exports two volumes for configuration and data:
+This Dockerfile (available as ___marvambass/deluge___) will produce a docker container for the __deluge__ bittorrent client software.
 
- - **/data** - configuration files for deluge
- - **/downloads** - download directory for torrents
+View in Docker Registry [marvambass/deluge](https://registry.hub.docker.com/u/marvambass/deluge/)
 
-Execution
----------
+View in GitHub [MarvAmBass/deluge](https://github.com/MarvAmBass/docker-deluge)
 
-```sh
-docker run -v /opt/data:/data -v /opt/downloads:/downloads seamusv/deluge
-```
+This container was forked from [seamusv/deluge](https://github.com/seamusv/deluge). I did a few modifications to fit it into my __marvambass/__ image style.
 
-[deluge]:http://deluge-torrent.org/
-[aostanin]:https://registry.hub.docker.com/u/aostanin/deluge/
+## Volumes
+
+* __/data__
+ * configuration files for deluge
+* __/downloads__
+ * download directory for torrents
+
+
+## Running marvambass/deluge Container
+
+    docker run -v /opt/data:/data -v /opt/downloads:/downloads marvambass/deluge
