@@ -1,5 +1,5 @@
-FROM ubuntu:14.04
-MAINTAINER MarvAmBass
+FROM debian:jessie
+MAINTAINER colega
 
 RUN apt-get update; apt-get install -y \
     deluged \
@@ -8,7 +8,8 @@ RUN apt-get update; apt-get install -y \
 ADD entrypoint.sh /opt/entrypoint.sh
 RUN chmod a+x /opt/entrypoint.sh
 
-VOLUME ["/data"]
+VOLUME ["/config"]
+VOLUME ["/pending"]
 VOLUME ["/downloads"]
 
 EXPOSE 53160
