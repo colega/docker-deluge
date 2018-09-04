@@ -1,6 +1,4 @@
 # Docker Deluge WebUI Container (colega/deluge)
-_maintained by colega_
-
 ## What is it
 
 This Dockerfile (available as ___colega/deluge___) will produce a docker container for the __deluge__ bittorrent client software.
